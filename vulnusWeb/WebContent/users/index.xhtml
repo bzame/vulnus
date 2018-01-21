@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Public Users Area</title>
+    </h:head>
+    <h:body>
+        <h1>Hello users</h1>
+        <br />
+        <h:link outcome="/index" value="Back to Homepage" />
+        
+<!--         <p:panel header="Register new material"> -->
+<!--             <h:form id="newMaterial" > -->
+<!--                 <p:panelGrid columns="2"> -->
+<!--                     <h:outputLabel value="Id"></h:outputLabel>   -->
+<!--                     <p:inputNumber value="#{buildingMaterial.currentBuildingMaterial.id}"></p:inputNumber> -->
+                    
+<!--                     <h:outputLabel value="Name"></h:outputLabel>   -->
+<!--                     <p:inputText value="#{buildingMaterial.currentBuildingMaterial.name}"></p:inputText> -->
+                    
+<!--                     <h:outputLabel value="Description"></h:outputLabel>   -->
+<!--                     <p:inputText value="#{buildingMaterial.currentBuildingMaterial.description}"></p:inputText> -->
+                    
+<!--                     <h:outputLabel value="Compressive Strength"></h:outputLabel>   -->
+<!--                     <p:inputNumber value="#{buildingMaterial.currentBuildingMaterial.compressiveStrength}"></p:inputNumber> -->
+                    
+<!--                     <h:outputLabel value="Tensile Strength"></h:outputLabel> -->
+<!--                     <p:inputNumber value="#{buildingMaterial.currentBuildingMaterial.tensileStrength}"></p:inputNumber> -->
+                    
+<!--                     <h:outputLabel value="Density"></h:outputLabel> -->
+<!--                     <p:inputNumber value="#{buildingMaterial.currentBuildingMaterial.density}"></p:inputNumber> -->
+<!--                 </p:panelGrid>   -->
+<!--                 <h:commandButton value="Submit" id="submit" action="#{buildingMaterial.register()}" />   -->
+<!--             </h:form> -->
+<!--         </p:panel> -->
+        
+        
+        
+        <p:panel header="Available materials">
+	        <p:dataTable var="material" value="#{buildingMaterialBean.buildingMaterialList}">
+	            <p:column headerText="Id">
+	                <h:outputText value="#{material.id}" />
+	            </p:column>
+	         
+	            <p:column headerText="Name">
+	                <h:outputText value="#{material.name}" />
+	            </p:column>
+	         
+	            <p:column headerText="Description">
+	                <h:outputText value="#{material.description}" />
+	            </p:column>
+	         
+	            <p:column headerText="Compressive Strength">
+	                <h:outputText value="#{material.compressiveStrenght}" />
+	            </p:column>
+	         
+	            <p:column headerText="Tensile Strenght">
+	                <h:outputText value="#{material.tensileStrenght}" />
+	            </p:column>
+	         
+	            <p:column headerText="Density">
+	                <h:outputText value="#{material.density}" />
+	            </p:column>
+	        </p:dataTable>
+        </p:panel>
+    </h:body>
+</html>
+
